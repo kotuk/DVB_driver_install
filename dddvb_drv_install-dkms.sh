@@ -14,6 +14,9 @@ cd /usr/src/dddvb-dkms
 sed -i -e 's/^#if defined(CONFIG_DVB_MAX_ADAPTERS).*$/#if 0/g' dvb-core/dvbdev.h
 sed -i -e 's/DVB_MAX_ADAPTERS 64/DVB_MAX_ADAPTERS 256/g' dvb-core/dvbdev.h
 sed -i -e 's/^\(#define MAX_DVB_MINORS*\).*/\1 512/g' dvb-core/dvbdev.c
+
+echo 'Starting Driver Installation via DKMS'
+
 echo "PACKAGE_NAME=dddvb
 PACKAGE_VERSION=dddvb-dkms
 AUTOINSTALL=y
